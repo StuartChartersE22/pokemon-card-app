@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import '../style/DashBoard.css';
+import '../styles/DashBoard.css';
 import Pokemon from 'pokemontcgsdk';
 
-class DashBoard {
+class DashBoard extends Component {
 
   constructor(props) {
     super(props)
@@ -10,10 +10,16 @@ class DashBoard {
 
   render(){
 
-    const card = 
+    let card = null;
+
+    Pokemon.card.find('base1-4')
+      .then(result => {
+        card = result.card.imageUrl;
+        console.log(card);
+      })
 
     return (
-
+      <img src={card} alt="card"/>
     );
   }
 

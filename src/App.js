@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '.style/App.css';
+// import '.styles/App.css';
 import DashBoard from './containers/DashBoard.js'
 
 class App extends Component {
